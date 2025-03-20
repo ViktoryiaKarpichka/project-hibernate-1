@@ -1,7 +1,6 @@
 package com.game.repository;
 
 import com.game.entity.Player;
-import jakarta.persistence.NamedQuery;
 import java.util.Properties;
 import javax.annotation.PreDestroy;
 import org.hibernate.Session;
@@ -12,7 +11,6 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -29,7 +27,6 @@ public class PlayerRepositoryDB implements IPlayerRepository {
         properties.put(Environment.USER, "root");
         properties.put(Environment.PASS, "root");
         properties.put(Environment.HBM2DDL_AUTO, "update");
-
 
         sessionFactory = new Configuration()
                 .addAnnotatedClass(Player.class)
